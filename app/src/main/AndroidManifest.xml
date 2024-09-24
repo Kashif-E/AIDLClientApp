@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kashif.myapplication">
+
+    <!-- Permissions to bind to the server's service -->
+    <uses-permission android:name="com.kashif.aidlmessage.permission.BIND_COMMUNICATION_SERVICE" />
+
+    <queries>
+        <!-- Correctly query the server app's package name -->
+        <package android:name="com.kashif.aidlmessage" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.MyApplication"
+        android:supportsRtl="true"
+        tools:replace="android:theme"
+        >
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
